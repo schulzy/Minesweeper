@@ -1,10 +1,8 @@
-﻿using Unity;
-
-namespace Schulzy.Minesweeper.Interface
+﻿namespace Schulzy.Minesweeper.Interface
 {
     public interface IFieldGenerator
     {
-        void Initialize();
+        void Initialize(FieldSettings fieldSettings);
         void Generate();
     }
 }
