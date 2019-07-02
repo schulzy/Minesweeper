@@ -18,6 +18,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Launcher", "Launcher", "{FB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schulzy.Minesweeper.Launcher", "..\Minesweeper-Launcher\Schulzy.Minesweeper.Launcher\Schulzy.Minesweeper.Launcher\Schulzy.Minesweeper.Launcher.csproj", "{6AC4A9EF-F9AA-4C2C-A6E8-1E0483A7C20C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3251BD85-16C4-48FD-940E-04FFE92CEC6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{3C895256-B567-44A4-B6FB-5A82B8A66061}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Schulzy.Minesweeper.Domain.Test", "..\Minesweeper-Domain\Schulzy.Minesweeper.Domain.Test\Schulzy.Minesweeper.Domain.Test.csproj", "{CDCE959C-1E34-4F47-B323-B2EDF2099184}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +46,10 @@ Global
 		{6AC4A9EF-F9AA-4C2C-A6E8-1E0483A7C20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AC4A9EF-F9AA-4C2C-A6E8-1E0483A7C20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AC4A9EF-F9AA-4C2C-A6E8-1E0483A7C20C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDCE959C-1E34-4F47-B323-B2EDF2099184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDCE959C-1E34-4F47-B323-B2EDF2099184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDCE959C-1E34-4F47-B323-B2EDF2099184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDCE959C-1E34-4F47-B323-B2EDF2099184}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +60,8 @@ Global
 		{3D5A128E-BDE4-4173-A874-EF627F858176} = {A6EA6787-EFAE-481A-B7A2-4C05F0BA700F}
 		{53449142-826D-4895-8AC5-A9D2ABF3B8AC} = {3D5A128E-BDE4-4173-A874-EF627F858176}
 		{6AC4A9EF-F9AA-4C2C-A6E8-1E0483A7C20C} = {FB28067F-D652-4FBA-8076-D7D4DF2CE1CF}
+		{3C895256-B567-44A4-B6FB-5A82B8A66061} = {3251BD85-16C4-48FD-940E-04FFE92CEC6D}
+		{CDCE959C-1E34-4F47-B323-B2EDF2099184} = {3C895256-B567-44A4-B6FB-5A82B8A66061}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {321867CF-6824-4E0B-9E66-212E39A2B2A0}

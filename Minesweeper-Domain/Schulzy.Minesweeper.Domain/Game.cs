@@ -2,7 +2,7 @@
 
 namespace Schulzy.Minesweeper.Domain
 {
-    public sealed class Game : IGame
+    internal sealed class Game : IGame
     {
     }
 }

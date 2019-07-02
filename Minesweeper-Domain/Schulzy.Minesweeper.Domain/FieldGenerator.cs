@@ -2,7 +2,7 @@
 using Unity;
 namespace Schulzy.Minesweeper.Domain
 {
-    public class FieldGenerator : IFieldGenerator
+    internal class FieldGenerator : IFieldGenerator
     {
         private readonly IUnityContainer _container;
         private FieldSettings _fieldSettings;
