@@ -1,4 +1,7 @@
-﻿using Schulzy.Minesweeper.Interface;
+﻿using System;
+using System.Collections.Generic;
+using Schulzy.Minesweeper.Domain.Utils;
+using Schulzy.Minesweeper.Interface;
 using Unity;
 namespace Schulzy.Minesweeper.Domain
 {
@@ -10,16 +13,29 @@ namespace Schulzy.Minesweeper.Domain
         public FieldGenerator(IUnityContainer container)
         {
             _container = container;
+            _fieldSettings = _container.Resolve<FieldSettings>();
         }
 
         public void Generate()
         {
-            throw new System.NotImplementedException();
+            var field = new Field(_container.Resolve<FieldSettings>());
+            AddMines(field);
+            CalculateNeighborBombs(field);
+            _container.RegisterInstance<Field>(field);
         }
 
-        public void Initialize(FieldSettings fieldSettings)
+        private void CalculateNeighborBombs(Field field)
         {
-            _fieldSettings = fieldSettings;
+            HashSet<int[]> hs = new HashSet<int[]>();
+            while(hs.Count!= _fieldSettings.Mines)
+            {
+                hs.Add(new int[] { Helper.GetRandomNumber(0, field.Rows), Helper.GetRandomNumber(0, field.Columns) });
+            }
+        }
+
+        private void AddMines(Field field)
+        {
+            throw new NotImplementedException();
         }
     }
 }
