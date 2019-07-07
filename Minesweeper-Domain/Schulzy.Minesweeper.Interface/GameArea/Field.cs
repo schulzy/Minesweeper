@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Schulzy.Minesweeper.Interface
+namespace Schulzy.Minesweeper.Interface.GameArea
 {
     public class Field
     {
@@ -9,7 +9,7 @@ namespace Schulzy.Minesweeper.Interface
 
         public int Columns { get; }
 
-        public Cell this[int rowIndex,int columnIndex]
+        public Cell this[int rowIndex, int columnIndex]
         {
             get
             {

@@ -1,4 +1,5 @@
 ﻿using Schulzy.Minesweeper.Interface;
+using Schulzy.Minesweeper.Interface.GameArea;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,8 @@ namespace Schulzy.Minesweeper.Domain.Module
     {
         public ModuleRegister(IUnityContainer dicontainer)
         {
+            dicontainer.RegisterType<IBombSetter, BombSetter>();
+            dicontainer.RegisterType<INeighbourBombCalculator, NeighbourBombCalculator>();
             dicontainer.RegisterType<IFieldGenerator,FieldGenerator>();
             dicontainer.RegisterType<IGame,Game>();
         }

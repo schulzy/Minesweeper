@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Schulzy.Minesweeper.Interface
+﻿namespace Schulzy.Minesweeper.Interface.GameArea
 {
     public class Cell
     {

@@ -1,4 +1,4 @@
-﻿using Schulzy.Minesweeper.Interface;
+﻿using Schulzy.Minesweeper.Interface.GameArea;
 using System;
 using System.Collections.Generic;
 using System.Text;
