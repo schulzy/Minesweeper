@@ -6,22 +6,22 @@ namespace Schulzy.Minesweeper.Domain
     {
         private readonly IUnityContainer _container;
         private FieldSettings _fieldSettings;
-        private INeighbourBombCalculator _neighbourBombCalculator;
-        private IBombSetter _bombSetter;
+        private INeighbourMinesCalculator _neighbourBombCalculator;
+        private IMineSetter _bombSetter;
 
         public FieldGenerator(IUnityContainer container)
         {
             _container = container;
             _fieldSettings = _container.Resolve<FieldSettings>();
-            _neighbourBombCalculator = container.Resolve<INeighbourBombCalculator>();
-            _bombSetter = container.Resolve<IBombSetter>();
+            _neighbourBombCalculator = container.Resolve<INeighbourMinesCalculator>();
+            _bombSetter = container.Resolve<IMineSetter>();
         }
 
         public void Generate()
         {
             var field = new Field(_container.Resolve<FieldSettings>());
-            _bombSetter.SetBombs(field,_fieldSettings.Mines);
-            _neighbourBombCalculator.CalculateNeighbourBombs(field);
+            _bombSetter.SetMines(field,_fieldSettings.Mines);
+            _neighbourBombCalculator.CalculateNeighbourMines(field);
             _container.RegisterInstance<Field>(field);
         }
     }

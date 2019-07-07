@@ -11,8 +11,8 @@ namespace Schulzy.Minesweeper.Domain.Module
     {
         public ModuleRegister(IUnityContainer dicontainer)
         {
-            dicontainer.RegisterType<IBombSetter, BombSetter>();
-            dicontainer.RegisterType<INeighbourBombCalculator, NeighbourBombCalculator>();
+            dicontainer.RegisterType<IMineSetter, MineSetter>();
+            dicontainer.RegisterType<INeighbourMinesCalculator, NeighbourMinesCalculator>();
             dicontainer.RegisterType<IFieldGenerator,FieldGenerator>();
             dicontainer.RegisterType<IGame,Game>();
         }
