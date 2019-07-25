@@ -23,7 +23,7 @@ namespace Schulzy.Minesweeper.Domain.GameArea
             if (columnIndex < 0 || columnIndex >= _field.Columns - 1)
                 throw new ArgumentOutOfRangeException(nameof(columnIndex));
 
-            return _field[rowIndex, columnIndex];
+            return _field[columnIndex, rowIndex];
         }
 
         public void ChangeCellSelection(int rowIndex, int columnIndex)
@@ -34,7 +34,7 @@ namespace Schulzy.Minesweeper.Domain.GameArea
             if (columnIndex < 0 || columnIndex >= _field.Columns - 1)
                 throw new ArgumentOutOfRangeException(nameof(columnIndex));
 
-            _field[rowIndex, columnIndex].IsSelected = !_field[rowIndex, columnIndex].IsSelected;
+            _field[columnIndex, rowIndex].IsSelected = !_field[columnIndex, rowIndex].IsSelected;
         }
     }
 }

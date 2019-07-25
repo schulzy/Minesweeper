@@ -11,7 +11,7 @@ namespace Schulzy.Minesweeper.Interface.GameArea
 
         public int Columns { get; }
 
-        public Cell this[int rowIndex, int columnIndex]
+        public Cell this[int columnIndex, int rowIndex]
         {
             get
             {
@@ -21,7 +21,7 @@ namespace Schulzy.Minesweeper.Interface.GameArea
                 if (columnIndex < 0 || columnIndex >= Columns)
                     throw new ArgumentOutOfRangeException(nameof(columnIndex));
 
-                return _cells[rowIndex, columnIndex];
+                return _cells[columnIndex, rowIndex];
             }
             set
             {
@@ -31,7 +31,7 @@ namespace Schulzy.Minesweeper.Interface.GameArea
                 if (columnIndex < 0 || columnIndex >= Columns)
                     throw new ArgumentOutOfRangeException(nameof(columnIndex));
 
-                _cells[rowIndex, columnIndex] = value;
+                _cells[columnIndex, rowIndex] = value;
             }
         }
 
@@ -40,12 +40,12 @@ namespace Schulzy.Minesweeper.Interface.GameArea
             Rows = fieldSettings.Rows;
             Columns = fieldSettings.Columns;
 
-            _cells = new Cell[Rows, Columns];
-            for (int i = 0; i < Columns; i++)
+            _cells = new Cell[Columns, Rows];
+            for (int i = 0; i < Rows; i++)
             {
-                for (int j = 0; j < Rows; j++)
+                for (int j = 0; j < Columns; j++)
                 {
-                    _cells[i, j] = new Cell();
+                    _cells[j, i] = new Cell();
                 }
             }
         }
