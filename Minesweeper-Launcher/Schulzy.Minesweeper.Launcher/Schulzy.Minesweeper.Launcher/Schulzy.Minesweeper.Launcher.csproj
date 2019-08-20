@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,5 +8,17 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <OutputPath>..\..\..\bin\</OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Unity" Version="5.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Minesweeper-Domain\Schulzy.Minesweeper.Domain\Schulzy.Minesweeper.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Minesweeper-Domain\Schulzy.Minesweeper.Interface\Schulzy.Minesweeper.Interface.csproj" />
+    <ProjectReference Include="..\..\..\Minesweeper-UI\Schulzy.Minesweeper.UI\Winforms\Schulzy.Minesweeper.UI.Winforms.Controller\Schulzy.Minesweeper.UI.Winforms.Controller.csproj" />
+    <ProjectReference Include="..\..\..\Minesweeper-UI\Schulzy.Minesweeper.UI\Winforms\Schulzy.Minesweeper.UI.Winforms.Model\Schulzy.Minesweeper.UI.Winforms.Model.csproj" />
+    <ProjectReference Include="..\..\..\Minesweeper-UI\Schulzy.Minesweeper.UI\Winforms\Schulzy.Minesweeper.UI.Winforms.View\Schulzy.Minesweeper.UI.Winforms.View.csproj" />
+  </ItemGroup>
 
 </Project>

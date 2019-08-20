@@ -1,12 +1,10 @@
 ﻿using Schulzy.Minesweeper.Interface.GameArea;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Unity;
 
 namespace Schulzy.Minesweeper.Domain.GameArea
 {
-    internal class FieldManager
+    internal class FieldManager : IFieldManager
     {
         private Field _field;
 

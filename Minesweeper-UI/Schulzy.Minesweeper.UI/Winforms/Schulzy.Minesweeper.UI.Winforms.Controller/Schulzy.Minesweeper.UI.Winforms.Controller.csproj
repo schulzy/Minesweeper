@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\..\..\bin\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Minesweeper-Domain\Schulzy.Minesweeper.Interface\Schulzy.Minesweeper.Interface.csproj" />
+    <ProjectReference Include="..\Schulzy.Minesweeper.UI.Winforms.Model\Schulzy.Minesweeper.UI.Winforms.Model.csproj" />
+  </ItemGroup>
+
+</Project>
