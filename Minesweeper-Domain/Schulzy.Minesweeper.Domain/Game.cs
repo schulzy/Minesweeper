@@ -6,17 +6,20 @@ namespace Schulzy.Minesweeper.Domain
 {
     internal sealed class Game : IGame
     {
+        private IUnityContainer _container;
         IFieldManager _fieldManager;
         public Game(IUnityContainer container)
         {
-            _fieldManager = container.Resolve<IFieldManager>();
+            _container = container;
         }
         
-        public IFieldManager FieldManager => _fieldManager;
+        public IFieldManager FieldManager => _container.Resolve<IFieldManager>();
 
         public void NewGame(FieldSettings fieldSettings)
         {
-            throw new System.NotImplementedException();
+            _container.RegisterInstance(fieldSettings);
+            var fieldGenerator = _container.Resolve<IFieldGenerator>();
+            fieldGenerator.Generate();
         }
     }
 }

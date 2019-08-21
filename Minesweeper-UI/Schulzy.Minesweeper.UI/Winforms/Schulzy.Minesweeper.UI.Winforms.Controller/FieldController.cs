@@ -1,4 +1,5 @@
 ﻿using Schulzy.Minesweeper.Interface;
+using Schulzy.Minesweeper.Interface.GameArea;
 
 namespace Schulzy.Minesweeper.UI.Winforms.Controller
 {
@@ -11,6 +12,11 @@ namespace Schulzy.Minesweeper.UI.Winforms.Controller
         {
             _fieldView = fieldView;
             _game = game;
+        }
+
+        public void StartNewGame(FieldSettings fieldSettings)
+        {
+            _game.NewGame(fieldSettings);
         }
     }
 }

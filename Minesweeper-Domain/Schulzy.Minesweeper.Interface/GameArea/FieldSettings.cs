@@ -2,8 +2,15 @@
 {
     public class FieldSettings
     {
-        public int Columns { get; set; }
-        public int Rows { get; set; }
-        public int Mines { get; set; }
+        public int Columns { get; }
+        public int Rows { get; }
+        public int Mines { get; }
+
+        public FieldSettings(int columns, int rows, int mines)
+        {
+            Columns = columns;
+            Rows = rows;
+            Mines = mines;
+        }
     }
 }
